@@ -21,6 +21,6 @@ const contatoSchema = new mongoose.Schema({
         required: [true, 'A foto é obrigatória']
     }
 }, {
-timestamps: true
+    timestamps: true
 });
 module.exports = mongoose.model('Contato', contatoSchema);
