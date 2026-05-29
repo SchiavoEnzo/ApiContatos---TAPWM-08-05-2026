@@ -6,7 +6,7 @@ router.get('/', contatoController.getAllContatos);
 
 router.get('/:id', contatoController.getContatoById);
 
-router.post('/contatos.contatos', contatoController.createContato);
+router.post('/', contatoController.createContato);
 
 router.put('/:id', contatoController.updateContato);
 
