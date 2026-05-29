@@ -26,9 +26,9 @@ exports.createContato = async (req, res) => {
     res.status(201).json(novoContato);
   } catch (err) {
     res.status(400).json({ mensagem: 'Erro ao criar contato', erro: err.message });
-  }  
+  }
 };
-                             
+
 exports.updateContato = async (req, res) => {
   try {
     const contatoAtualizado = await Contato.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -47,4 +47,4 @@ exports.deleteContato = async (req, res) => {
   } catch (err) {
     res.status(500).json({ mensagem: 'Erro ao excluir contato', erro: err.message });
   }
-};                                                                                                        
+};
