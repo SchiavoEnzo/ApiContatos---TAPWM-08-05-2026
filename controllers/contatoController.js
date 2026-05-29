@@ -5,7 +5,7 @@ exports.getAllContatos = async (req, res) => {
     const contatos = await Contato.find();
     res.json(contatos);
   } catch (err) {
-    res.status(500).json({ mensagem: 'Erro ao buscar contatos', erro: err.message });
+    res.status(500).json({ mensagem: 'Erro ao buscar contatos', erro: err.message});
   }
 };
 

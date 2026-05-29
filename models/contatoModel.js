@@ -12,13 +12,12 @@ const contatoSchema = new mongoose.Schema({
   endereco: {
     type: String,
     required: [true, 'O endereço é obrigatório']
-  },.con
-  telefone: {
+  },  telefone: {
     type: String,
     required: [true, 'O telefone é obrigatório']
   },
   foto: {
-    type: String, // Pode ser uma URL ou caminho de arquivo
+    type: String,
     required: [true, 'A foto é obrigatória']
   }
 }, {

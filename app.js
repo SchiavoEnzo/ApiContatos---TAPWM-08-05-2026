@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/api', contatoRoutes);
+app.use('/api/contatos', contatoRoutes);
 
 conectarBanco();
 const PORT = process.env.PORT || 3000;
