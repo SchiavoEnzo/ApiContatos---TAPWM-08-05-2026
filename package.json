@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "push": "git add . && git commit -m 'Automatic Changes' && git push"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
