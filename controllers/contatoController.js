@@ -1,50 +1,50 @@
-const Contato = require('../models/contatoModel');
+const Character = require('../models/characterModel');
 
-exports.getAllContatos = async (req, res) => {
+exports.getAllCharacters = async (req, res) => {
   try {
-    const contatos = await Contato.find();
-    res.json(contatos);
+    const characters = await Character.find();
+    res.json(characters);
   } catch (err) {
-    res.status(500).json({ mensagem: 'Erro ao buscar contatos', erro: err.message});
+    res.status(500).json({ mensagem: 'Erro ao buscar characters', erro: err.message});
   }
 };
 
-exports.getContatoById = async (req, res) => {
+exports.getCharacterById = async (req, res) => {
   try {
-    const contato = await Contato.findById(req.params.id);
-    if (!contato) return res.status(404).json({ mensagem: 'Contato não encontrado' });
-    res.json(contato);
+    const character = await Character.findById(req.params.id);
+    if (!character) return res.status(404).json({ mensagem: 'Personagem não encontrado' });
+    res.json(character);
   } catch (err) {
-    res.status(500).json({ mensagem: 'Erro ao buscar contato', erro: err.message });
+    res.status(500).json({ mensagem: 'Erro ao buscar personagem', erro: err.message });
   }
 };
 
-exports.createContato = async (req, res) => {
+exports.createCharacter = async (req, res) => {
   try {
-    const novoContato = new Contato(req.body);
-    await novoContato.save();
-    res.status(201).json(novoContato);
+    const novoCharacter = new Character(req.body);
+    await novoCharacter.save();
+    res.status(201).json(novoCharacter);
   } catch (err) {
-    res.status(400).json({ mensagem: 'Erro ao criar contato', erro: err.message });
+    res.status(400).json({ mensagem: 'Erro ao criar Personagem', erro: err.message });
   }
 };
 
-exports.updateContato = async (req, res) => {
+exports.updateCharacter = async (req, res) => {
   try {
-    const contatoAtualizado = await Contato.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    if (!contatoAtualizado) return res.status(404).json({ mensagem: 'Contato não encontrado' });
-    res.json(contatoAtualizado);
+    const characterAtualizado = await Character.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!characterAtualizado) return res.status(404).json({ mensagem: 'Personagem não encontrado' });
+    res.json(characterAtualizado);
   } catch (err) {
-    res.status(400).json({ mensagem: 'Erro ao atualizar contato', erro: err.message });
+    res.status(400).json({ mensagem: 'Erro ao atualizar Personagem', erro: err.message });
   }
 };
 
-exports.deleteContato = async (req, res) => {
+exports.deleteCharacter = async (req, res) => {
   try {
-    const contatoRemovido = await Contato.findByIdAndDelete(req.params.id);
-    if (!contatoRemovido) return res.status(404).json({ mensagem: 'Contato não encontrado' });
+    const characterRemovido = await Character.findByIdAndDelete(req.params.id);
+    if (!characterRemovido) return res.status(404).json({ mensagem: 'Personagem não encontrado' });
     res.status(204).end();
   } catch (err) {
-    res.status(500).json({ mensagem: 'Erro ao excluir contato', erro: err.message });
+    res.status(500).json({ mensagem: 'Erro ao excluir Personagem', erro: err.message });
   }
 };

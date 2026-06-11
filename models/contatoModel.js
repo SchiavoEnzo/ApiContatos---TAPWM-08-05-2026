@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const contatoSchema = new mongoose.Schema({
+const characterSchema = new mongoose.Schema({
   caractheristics:{
     name: { type: String, required: [true, 'Name is required'] },
     age: { type: String, required: [true, 'Age is required'] },
@@ -69,5 +69,5 @@ const contatoSchema = new mongoose.Schema({
   timestamps: true
 });
 
-module.exports = mongoose.model('Contato', contatoSchema);
+module.exports = mongoose.model('character', characterSchema);
 

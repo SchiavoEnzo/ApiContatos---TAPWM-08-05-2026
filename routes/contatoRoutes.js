@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const contatoController = require('../controllers/contatoController');
+const characterController = require('../controllers/characterController');
 
-router.get('/', contatoController.getAllContatos);
+router.get('/', characterController.getAllCharacters);
 
-router.get('/:id', contatoController.getContatoById);
+router.get('/:id', characterController.getCharacterById);
 
-router.post('/', contatoController.createContato);
+router.post('/', characterController.createCharacter);
 
-router.put('/:id', contatoController.updateContato);
+router.put('/:id', characterController.updateCharacter);
 
-router.delete('/:id', contatoController.deleteContato);
+router.delete('/:id', characterController.deleteCharacter);
 
 module.exports = router;
