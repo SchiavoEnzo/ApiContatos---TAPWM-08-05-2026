@@ -12,4 +12,4 @@ app.use('/api/characters', characterRoutes);
 
 conectarBanco();
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Sucessfully running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Sucessfully running on port ${PORT} \n Welcome, user.`));

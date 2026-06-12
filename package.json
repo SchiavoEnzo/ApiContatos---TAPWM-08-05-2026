@@ -1,7 +1,10 @@
 {
   "scripts": {
     "start": "node app.js",
-    "push": "git add . && git commit -m 'Automatic Changes' && git push"
+    "all": "git add . && git commit -m 'Automatic Changes' && git push",
+    "r": "git add routes/ && git commit -m 'Automatic Changes' && git push",
+    "c": "git add controllers/ && git commit -m 'Automatic Changes' && git push",
+    "m": "git add models/ && git commit -m 'Automatic Changes' && git push"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
