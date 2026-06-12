@@ -2,3 +2,7 @@
 > 
 > ## Objetivo
 >   Este é um repositório público destinado a estudo e uso de arquivamento de dados relacionados com a criação de objetos de uma derivação de Ordem Paranormal.
+>
+> ## Integrantes
+> ###  Enzo Schiavo
+> ###  Giovanni Toccoli Bassetti
